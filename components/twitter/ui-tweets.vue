@@ -2,43 +2,51 @@
   <v-row v-if="tweets.length > 0">
     <v-card v-for="tweet in tweets" :key="tweet.tweet_id" class="cardTweet">
       <v-row>
-        <v-col align="center" justify="center">
+        <v-col align="center" justify="end">
           <v-img
             :src="require('@/assets/avatars/brawl.jpg')"
-            style="border-radius: 50%; width: 40px; height:40px;"
+            style="width: 45px; height:45px;"
           >
           </v-img>
         </v-col>
         <v-col cols="10" class="ma-1 pa-1">
           <v-row>
-            <v-col cols="2">
-              <p>{{ tweet.user.username }}</p>
+            <v-col cols="3" class="d-flex align-center">
+              <p><b>{{ tweet.user.username }}</b></p>
+              <v-img :src="require('@/assets/icons/verificado.svg')" style="max-width:20px; margin-top: -7px;"></v-img>
             </v-col>
             <v-col cols="2">
               <p>@{{ tweet.user.username }}</p>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="6">
               <p>{{ tweet.creation_date }}</p>
             </v-col>
-            <v-col justify="end">
+            <v-col class="text-rigth">
               <v-img :src="require('@/assets/icons/elipsis.svg')" style="max-width:20px;"></v-img>
             </v-col>
           </v-row>
           <v-row>
             <p>{{ tweet.text }}</p>
           </v-row>
+          <v-row align="center" justify="center">
+            <v-img v-if="tweet.media_url && tweet.media_url.length > 0" :src="tweet.media_url[0]" style="max-width:350px; border: 10px;"></v-img>
+          </v-row>
           <v-row class="mb-2">
-            <v-col cols="2">
-              <v-img :src="require('@/assets/icons/comentario.svg')" style="max-width:20px;"></v-img>
+            <v-col cols="2" class="d-flex align-center">
+                <v-img :src="require('@/assets/icons/comentario.svg')" style="max-width:20px;"></v-img>
+                <p class="my-0 ml-2">{{ tweet.reply_count }}</p>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="2" class="d-flex align-center">
               <v-img :src="require('@/assets/icons/repost.svg')" style="max-width:20px;"></v-img>
+              <p class="my-0 ml-2">{{ tweet.retweet_count }}</p>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="2" class="d-flex align-center">
               <v-img :src="require('@/assets/icons/like.svg')" style="max-width:20px;"></v-img>
+              <p class="my-0 ml-2">{{ tweet.favorite_count }}</p>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="2" class="d-flex align-center">
               <v-img :src="require('@/assets/icons/view.svg')" style="max-width:20px;"></v-img>
+              <p class="my-0 ml-2">{{ tweet.views }}</p>
             </v-col>
             <v-col cols="2">
               <v-row>
@@ -81,7 +89,7 @@ export default {
           include_pinned: 'false'
         },
         headers: {
-          'X-RapidAPI-Key': '8608917c9emsh7f5e6b12a812d15p1f34cbjsnbb86019cb253',
+          'X-RapidAPI-Key': 'dc756c4b53msh9fd7ba95c0e213fp107443jsn6bc3ecf42dd6',
           'X-RapidAPI-Host': 'twitter154.p.rapidapi.com'
         }
       }
