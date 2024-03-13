@@ -26,7 +26,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <p>{{ tweet.text }}</p>
+            <p style="width:700px;">{{ tweet.text }}</p>
           </v-row>
           <v-row align="center" justify="center">
             <v-img v-if="tweet.media_url && tweet.media_url.length > 0" :src="tweet.media_url[0]" style="max-width:350px; border: 10px;"></v-img>

@@ -31,7 +31,7 @@
       <input type="text" placeholder="Celular, email o celular" outlined class="inputEmail"/>
     </v-row>
     <v-row align="center" justify="center">
-      <v-btn outlined rounded class="mt-4" id="btnLogin">
+      <v-btn outlined rounded class="mt-4" id="btnLogin" @click="redirectHome">
         <span style="text-transform: none;">
           Avanzar
         </span>
@@ -42,7 +42,11 @@
 
 <script>
 export default {
-
+  methods: {
+    redirectHome () {
+      this.$router.push('/home')
+    }
+  }
 }
 </script>
 <style scoped>
