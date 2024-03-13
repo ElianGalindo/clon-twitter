@@ -7,7 +7,7 @@
       >
       </v-img>
     </v-col>
-    <v-col cols="10" class="ma-1 pa-1">
+    <v-col cols="10" class="ma-1 pa-1 mb-3">
       <v-row>
         <v-textarea
           v-model="tweet"
@@ -43,10 +43,15 @@
         </v-col>
       </v-row>
     </v-col>
+    <v-row class="ma-2 pa-2 mb-3">
+      <ui-tweets />
+    </v-row>
   </v-row>
 </template>
 <script>
+import uiTweets from '~/components/twitter/ui-tweets.vue'
 export default {
+  components: { uiTweets },
   data () {
     return {
       reglas: {
