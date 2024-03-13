@@ -3,9 +3,6 @@
     <v-row>
       <ui-tweet />
     </v-row>
-    <v-row>
-      tweets
-    </v-row>
   </v-col>
 </template>
 <script>
