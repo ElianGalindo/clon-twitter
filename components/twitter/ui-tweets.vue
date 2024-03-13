@@ -81,7 +81,7 @@ export default {
           include_pinned: 'false'
         },
         headers: {
-          'X-RapidAPI-Key': '8608917c9emsh7f5e6b12a812d15p1f34cbjsnbb86019cb253',
+          'X-RapidAPI-Key': 'dc756c4b53msh9fd7ba95c0e213fp107443jsn6bc3ecf42dd6',
           'X-RapidAPI-Host': 'twitter154.p.rapidapi.com'
         }
       }
