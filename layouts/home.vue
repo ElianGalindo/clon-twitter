@@ -31,6 +31,23 @@
           </span>
         </v-btn>
       </v-row>
+      <v-row align="center" justify="center">
+        <div style="display:flex; border: 2px;">
+          <v-col>
+            <v-img :src="require('@/assets/avatars/my-avatar.svg')" style="border-radius:50%; width:40px;">
+            </v-img>
+          </v-col>
+          <v-col cols="8">
+            <v-row class="my-0 flex-column">
+              <p class="mb-1"><b>Elian Galindo</b></p>
+              <p>@ElianG</p>
+            </v-row>
+          </v-col>
+          <v-col>
+            <v-img :src="require('@/assets/icons/elipsis.svg')" style="max-width:20px;"></v-img>
+          </v-col>
+        </div>
+      </v-row>
     </v-navigation-drawer>
     <v-main>
       <Nuxt/>

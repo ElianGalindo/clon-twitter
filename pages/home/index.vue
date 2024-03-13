@@ -1,5 +1,5 @@
 <template>
-  <v-col>
+  <v-col style="overflow-y:auto;">
     <v-row>
       <ui-tweet />
     </v-row>
